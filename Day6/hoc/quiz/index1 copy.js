@@ -5003,18 +5003,60 @@ const data = [
 
 //1. 화폐를 euro or dollar 사람만 필터링
 //배열일때만 every, some 사용!!
-const a = data.filter((x) => {
-  x.currency.includes("Euro") || x.currency.includes("Dollar");
-});
-console.log(a);
+const a = data.filter(
+  (x) => x.currency.includes("Euro") || x.currency.includes("Dollar")
+);
+// console.log(a);
 
 //2. 직업이 Engineer 사람만 필터링 -> 이름, 언어, 부서, 이메일만 나타내기
+const b = data
+  .filter((x) => x.jobTitle.includes("Engineer"))
+  .map((x) => {
+    return {
+      name: x.name,
+      language: x.language,
+      department: x.department,
+      email: x.email,
+    };
+  });
 
 //3. 달러를 원화로 바꾸고 + 그 원이 만원에서 백만원인 사람만 필터링 -> 이름, 크레딧카드, 이메일만 나타내기
+const c = data
+  //이 부분 다시!!!!!!
+  // .filter((x) => {
+  //   const money = Number(x.money.split("$")[1]) * 1430;
+  //   return 10000 <= money && money <= 1000000;
+  // })
+  .map((x) => {
+    return {
+      money: x.money,
+      name: x.name,
+      creaditCaard: x.creaditCaard,
+      email: x.email,
+    };
+  });
 
 //4. 현제 데이터에서 언어와 화폐단위만 남겨 보여주기
+const d = data.map((x) => {
+  return {
+    language: x.language,
+    currency: x.currency,
+  };
+});
 
 //5. 이름은 성 빼고, 이메일은 도메인 빼고, 크레딧카드 앞 4개만 남겨서 보여주기
-
-const arr4 = ["사과", "배", "귤"];
-console.log(arr4.toString());
+const e = data
+  // .filter((x) => {
+  //   x.name = x.name.split(" ")[0];
+  //   const email = x.email.split("@");
+  //   x.email = [...email[0], ...email[1]];
+  //   x.creaditCaard = x.creaditCaard.slice(0, 3);
+  // })
+  .map((x) => {
+    return {
+      name: x.name,
+      email: x.email,
+      creaditCaard: x.creaditCaard,
+    };
+  });
+console.log(c);

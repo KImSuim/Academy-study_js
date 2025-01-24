@@ -5012,6 +5012,7 @@ const dateDollar2 = data
   .filter((x) => x.jobTitle.includes("Engineer"))
   .map((x) => {
     return {
+      money: x.money,
       name: x.name,
       language: x.language,
       department: x.department,

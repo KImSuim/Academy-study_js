@@ -20,7 +20,7 @@ const getLotto = () => {
   }
 };
 
-//중복 삭제된 거
+//중복 삭제된 거 (set을 사용하여 중복제거)
 const getLotto1 = () => {
   while (true) {
     const lotto = [
