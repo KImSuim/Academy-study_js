@@ -1,0 +1,39 @@
+.box{
+    border: 1px solid black;
+}
+
+.small{
+    width: 100px;
+    height: 100px;
+}
+.medium{
+    width: 100px;
+    height: 100px;
+}
+.large{
+    width: 100px;
+    height: 100px;
+}
+
+.square{
+    border-radius: 0px;
+}
+.soft{
+    border-radius: 40px;
+}
+.hard{
+    border-radius: 9999px;
+}
+
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
